@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Class in JS</title>
+        <body>
+            <center>
+           <h2 style="background-color: blue;"> JavaScript Class</h2>
+           <p id="student1" style="background-color: aqua;"></p>
+           <p id="student2" style="background-color: aquamarine;"></p>
+           <p id="student3" style="background-color: rgb(74, 148, 123);"></p>
+           <script>
+            // creating a class //
+            class student {
+                constructor(name, year, grade,) {
+                    this.name = name;
+                    this.year = year;
+                    this.grade = grade;
+                }
+                // creating age mrthod for class student //
+                age() {
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+            // use student class with two objects
+            student1 = new student("Riya", 2014, 8);
+               document.getElementById("student1").innerHTML =
+               "My name is " + student1.name + ".  I born in " +
+               student1.year + " .  And my age is " + student1.age()+" and my grade is "+student1.grade;
+
+               student2 = new student("Tina", 2018, 5);
+               document.getElementById("student2").innerHTML =
+               "My name is " + student2.name + ".  I born in " +
+               student2.year + " .  And my age is " + student2.age()+" and my grade is "+student2.grade;
+
+               student3 = new student("Sheeraz", 2010, 9);
+               document.getElementById("student3").innerHTML =
+               "My name is " + student3.name + ".  I born in " +
+               student3.year + " .  And my age is " + student3.age()+" and my grade is "+student3.grade;
+           </script>
+            </center>
+        </body>
+    </head>
+</html>
